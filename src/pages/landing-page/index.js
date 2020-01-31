@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import Dispatcher from "../../actions";
 
 class LandingPage extends Component {
-  componentDidMount() {
+  componentDidMount = () => {
     this.props.appLoaded();
-  }
+  };
   render() {
     return (
       <div>
@@ -16,7 +16,7 @@ class LandingPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
 });
 
 export default connect(mapStateToProps, Dispatcher)(LandingPage);
